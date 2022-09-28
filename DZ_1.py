@@ -1,16 +1,10 @@
-# 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
-# и проверяет, является ли этот день выходным.
-# -6 -> да
-# -7 -> да
-# -1 -> нет
+#2. Напишите программу для проверки истинности утверждения
+# ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-a = (1, 2, 3, 4, 5, 6, 7)
-day_week = int(input('Введите день недели: '))
-if a[0] <= day_week <= a[4]:
-    print('Workday')
+print("x y z")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            if not (x or y or z) == (not x and not y and not z):
+                print(x, y, z)
 
-elif a[5] <= day_week <= a[6]:
-    print('Weekend')
-
-else:
-    print("It's not a day of the week!" )
